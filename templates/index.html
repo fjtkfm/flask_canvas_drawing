@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body %}
+    <p>
+        <select id="penColor">
+            <option value="black">黒</option>
+            <option value="red">赤</option>
+            <option value="blue">青</option>
+            <option value="white">白</option>
+        </select>
+        <select id="penWidth">
+            <option value="1">細</option>
+            <option value="3">中</option>
+            <option value="5">太</option>
+        </select>
+        <input type="button" id="erase" value="消去" />
+        <input type="button" id="save" value="追加" />
+    </p>
+    <canvas id="mycanvas" width="400" height="200">
+        Sorry, Your Browser does not use canvas.
+    </canvas>
+    <div id="gallery">
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+{% endblock %}
